@@ -156,13 +156,17 @@ public class Client
 	
 	public String stringCat(String[] array)
 	{
-		String out = "";
 		
+		StringBuilder sb = new StringBuilder();
+			
 		for(String s : array)
 		{
-			out += s;
-			out += "/";
+			
+			sb.append(s);
+			sb.append("/");
 		}
+		
+		String out = sb.toString();
 		
 		return out.substring(0, out.length() - 1);
 	}
